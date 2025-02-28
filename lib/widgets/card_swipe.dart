@@ -16,13 +16,25 @@ class CardSwipe extends StatelessWidget {
       child: Swiper(
         itemCount: 10,
         layout: SwiperLayout.STACK,
-        itemWidth: size.width * 0.7,
+        itemWidth: size.width * 0.4,
         itemHeight: size.height * 0.8,
         itemBuilder: (_, int index) {
-          return FadeInImage(
-            placeholder: AssetImage('assets/no-image.jpg'),
-            image: NetworkImage(
-              'https://www.psifoundation.org/wp-content/uploads/2018/03/placeholder-300x400-225x300.png',
+          return GestureDetector(
+            onTap:
+                () => Navigator.pushNamed(
+                  context,
+                  'details',
+                  arguments: 'movie-instance',
+                ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: FadeInImage(
+                placeholder: AssetImage('assets/no-image.jpg'),
+                image: NetworkImage(
+                  'https://www.psifoundation.org/wp-content/uploads/2018/03/placeholder-300x400-225x300.png',
+                ),
+                fit: BoxFit.cover,
+              ),
             ),
           );
         },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:peliculas_1/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,12 +22,16 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
 
-      body: Column(
-        children: [
-          CardSwipe(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Tarjetas principales
+            CardSwipe(),
 
-          //Listado horizontal de películas
-        ],
+            // Slider de peliculas
+            MovieSlider(),
+          ],
+        ),
       ),
     );
   }
