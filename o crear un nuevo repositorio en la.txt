@@ -1,0 +1,15 @@
+o crear un nuevo repositorio en la línea de comandos
+
+echo "# peliculas" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Nicolas76847107/peliculas.git
+git push -u origin main
+
+o insertar un repositorio existente desde la línea de comandos
+
+git remote add origin https://github.com/Calambillo11235813/peliculas.git
+git branch -M main
+git push -u origin main
