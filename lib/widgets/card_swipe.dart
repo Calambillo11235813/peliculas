@@ -16,8 +16,8 @@ class CardSwipe extends StatelessWidget {
       child: Swiper(
         itemCount: 10,
         layout: SwiperLayout.STACK,
-        itemWidth: size.width * 0.4,
-        itemHeight: size.height * 0.8,
+        itemWidth: size.width * 0.6,
+        itemHeight: size.height * 0.9,
         itemBuilder: (_, int index) {
           return GestureDetector(
             onTap:
@@ -30,9 +30,7 @@ class CardSwipe extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(
                 placeholder: AssetImage('assets/no-image.jpg'),
-                image: NetworkImage(
-                  'https://www.psifoundation.org/wp-content/uploads/2018/03/placeholder-300x400-225x300.png',
-                ),
+                image: NetworkImage('https://placehold.org/300x400'),
                 fit: BoxFit.cover,
               ),
             ),
